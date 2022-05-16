@@ -1,12 +1,8 @@
-import express from 'express';
+import { App } from './app.js';
 
-import { userRouter } from './users/users.js';
+async function bootstrap() {
+  const app = new App();
+  await app.init();
+}
 
-const port = 8000;
-const app = express();
-
-app.use('/users', userRouter);
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+bootstrap();
