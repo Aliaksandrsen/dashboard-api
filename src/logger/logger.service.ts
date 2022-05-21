@@ -17,6 +17,7 @@ export class LoggerService {
   }
 
   error(...args: unknown[]) {
+    // отправка в sentry / rollbar
     this.logger.error(...args);
   }
 

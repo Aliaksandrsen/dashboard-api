@@ -3,7 +3,7 @@ import express from 'express';
 const userRouter = express.Router();
 
 userRouter.use((req, res, next) => {
-  console.log('User received');
+  console.log('Обработчик users');
   next();
 });
 
