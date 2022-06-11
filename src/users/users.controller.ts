@@ -3,9 +3,10 @@ import { inject, injectable } from 'inversify';
 import { BaseController } from '../common/base.controller';
 import { ILogger } from '../logger/logger.interface';
 import { TYPES } from '../types';
+import { IUserController } from './users.controller.interface';
 
 @injectable()
-export class UserController extends BaseController {
+export class UserController extends BaseController implements IUserController {
   constructor(@inject(TYPES.ILogger) private loggerServise: ILogger) {
     super(loggerServise);
     this.bindRoutes([
