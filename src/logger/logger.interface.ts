@@ -1,7 +1,8 @@
-export interface ILogger {
-  logger: unknown;
+import { Logger } from 'tslog';
 
-  log: (...args: unknown[]) => void;
-  error: (...args: unknown[]) => void;
-  warn: (...args: unknown[]) => void;
+export interface ILogger {
+	logger: unknown;
+	log: (...args: unknown[]) => void;
+	error: (...args: unknown[]) => void;
+	warn: (...args: unknown[]) => void;
 }
